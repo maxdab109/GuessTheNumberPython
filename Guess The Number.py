@@ -9,9 +9,9 @@ def start(*args):
     global tries, gg, randomnum, txt1
     tries = tries+1
     if int(gg.get())<randomnum:
-        lbl3.configure(text="Higher!",bg="orange")
+        lbl3.configure(text="Go Up!",bg="orange")
     elif int(gg.get())>randomnum:
-        lbl3.configure(text="Lower!",bg="blue")
+        lbl3.configure(text="Go Down!",bg="blue")
     else:
         lbl3.configure(text="Correct!",bg="red")
         if tries >= 0:
@@ -26,7 +26,7 @@ def restart():
     lbl3.configure(text = "")
 
 
-lbl1=Label(gtn, text = "Guess The Number Game", font=('Arial', 25))
+lbl1=Label(gtn, text = "Guess The Number Game", font=('Arial', 25), bg="pink")
 lbl1.grid(column=0, row=0, columnspan=2)
 lbl2=Label(gtn, text="This game focuses on guessing your number,\n All you have to do is guess which number has been chosem from 0-100. \n Press 'Enter' to begin.", font=('Arial', 15))
 lbl2.grid(column=0, row=1, padx=20, columnspan=2)
